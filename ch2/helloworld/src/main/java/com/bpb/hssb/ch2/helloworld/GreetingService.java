@@ -10,10 +10,11 @@ public class GreetingService {
     public String greet() {
         LocalTime now = LocalTime.now();
         int currentHour = now.getHour();
-        if(currentHour < 12) {
-            return "it’s a wonderful morning!";
+        String msg = "Hello world";
+        if (currentHour < 12) {
+            return msg + ", it’s a wonderful morning!";
         } else {
-            return "it’s a wonderful afternoon!";
+            return msg + ", it’s a wonderful afternoon!";
         }
     }
 }

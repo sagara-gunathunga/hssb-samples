@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Import;
 
 @SpringBootConfiguration
-@Import({ HelloworldConfiguration.class })
 @EnableAutoConfiguration
+@Import({ HelloworldConfiguration.class })
 public class HelloworldApplication implements CommandLineRunner {
 
 	private GreetingService greetingService;

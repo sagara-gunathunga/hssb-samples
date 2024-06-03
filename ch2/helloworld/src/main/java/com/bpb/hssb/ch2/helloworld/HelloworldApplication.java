@@ -11,7 +11,7 @@ public class HelloworldApplication implements CommandLineRunner {
 	private GreetingService greetingService;
 
 	@Autowired
-	public HelloworldApplication(GreetingService greetingService) {
+	public void setGreetingService(GreetingService greetingService) {
 		this.greetingService = greetingService;
 	}
 
@@ -21,7 +21,6 @@ public class HelloworldApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		String message = "Hello World, " + greetingService.greet();
-		System.out.println(message);
+		System.out.println(greetingService.greet());
 	}
 }

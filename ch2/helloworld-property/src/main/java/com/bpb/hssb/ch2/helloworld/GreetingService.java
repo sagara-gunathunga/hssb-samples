@@ -1,16 +1,19 @@
-package com.bpb.hssb.ch2.helloworld.web;
+package com.bpb.hssb.ch2.helloworld;
 
 import java.time.LocalTime;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class GreetingService {
 
+    private String subject;
+
+    public GreetingService(String subject) {
+        this.subject = subject;
+    }
+
     public String greet() {
+        String msg = "Hello " + subject;
         LocalTime now = LocalTime.now();
         int currentHour = now.getHour();
-        String msg = "Hello world";
         if (currentHour < 12) {
             return msg + ", it’s a wonderful morning!";
         } else {

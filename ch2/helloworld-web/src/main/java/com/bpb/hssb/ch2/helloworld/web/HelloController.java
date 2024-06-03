@@ -15,7 +15,7 @@ public class HelloController {
     }
 
     @GetMapping("/hello")
-	public String hello(){
-		return "Hello World, " + greetingService.greet();
-	}
+    public String hello() {
+        return greetingService.greet();
+    }
 }
